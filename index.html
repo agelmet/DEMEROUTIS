@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="el" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Θοδωρής Δεμερούτης | Ψυχολόγος & Συστημικός Ψυχοθεραπευτής Αθήνα</title>
+    <meta name="description" content="Ο Θοδωρής Δεμερούτης είναι Ψυχολόγος & Συστημικός Ψυχοθεραπευτής στην Αθήνα (Πανόρμου). Παρέχει ατομική θεραπεία, ζεύγους, οικογένειας & παιδιών. Stigma-free, ΛΟΑΤΚΙ+ friendly. Κλείστε ραντεβού.">
+    <meta name="keywords" content="Ψυχολόγος Αθήνα, Συστημικός Ψυχοθεραπευτής, Ψυχοθεραπεία Πανόρμου, Ατομική Θεραπεία, Θεραπεία Ζεύγους, Παιδοψυχολόγος, ΛΟΑΤΚΙ+ friendly ψυχολόγος">
+    <link rel="icon" href="https://github.com/agelmet/Image-hosting-/blob/main/IMG_2676.jpeg?raw=true">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1A1A1A',
+                        secondary: '#F5F2ED',
+                        accent: '#D4AF37',
+                        surface: '#FFFFFF',
+                        muted: '#8E9299'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'float': 'float 6s ease-in-out infinite',
+                        'blob': 'blob 10s infinite alternate',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(40px) scale(0.95)', filter: 'blur(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0) scale(1)', filter: 'blur(0)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '100%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #F5F2ED; }
+        ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #1A1A1A; }
+
+        body {
+            background-color: #F5F2ED;
+            color: #1A1A1A;
+            overflow-x: hidden;
+            cursor: none; /* For Custom Cursor */
+        }
+
+        /* Custom Cursor */
+        .cursor-dot {
+            position: fixed;
+            top: 0; left: 0;
+            width: 8px; height: 8px;
+            background-color: #D4AF37;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s, background-color 0.3s, mix-blend-mode 0.3s;
+        }
+        .cursor-outline {
+            position: fixed;
+            top: 0; left: 0;
+            width: 40px; height: 40px;
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9998;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s, background-color 0.2s ease-out;
+        }
+        .hover-state .cursor-dot {
+            width: 60px; height: 60px;
+            background-color: #D4AF37;
+            mix-blend-mode: difference;
+        }
+        .hover-state .cursor-outline {
+            width: 0; height: 0; opacity: 0;
+        }
+
+        /* Glassmorphism Navigation */
+        .glass-nav {
+            background: rgba(245, 242, 237, 0.6);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Hero Glow */
+        .hero-gradient {
+            background: #F5F2ED;
+        }
+        .hero-glow-1 {
+            position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(212,175,55,0.15) 0%, rgba(245,242,237,0) 70%); top: -100px; right: -100px; border-radius: 50%; z-index: 0; pointer-events: none;
+        }
+        .hero-glow-2 {
+            position: absolute; width: 500px; height: 500px; background: radial-gradient(circle, rgba(26,26,26,0.08) 0%, rgba(245,242,237,0) 70%); bottom: -100px; left: -100px; border-radius: 50%; z-index: 0; pointer-events: none;
+        }
+
+        /* Advanced Reveals */
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px) scale(0.95) rotateX(10deg);
+            filter: blur(5px);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0) scale(1) rotateX(0);
+            filter: blur(0);
+        }
+
+        /* Image Masking & Zoom */
+        .image-hover-zoom {
+            overflow: hidden;
+            border-radius: 2rem;
+            position: relative;
+        }
+        .image-hover-zoom::after {
+            content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.2) 0%, transparent 100%); opacity: 0; transition: opacity 0.5s; pointer-events: none;
+        }
+        .image-hover-zoom:hover::after { opacity: 1; }
+        .image-hover-zoom img {
+            transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s;
+        }
+        .image-hover-zoom:hover img {
+            transform: scale(1.08) translateY(-2%);
+        }
+
+        /* 3D Service Cards */
+        .service-card {
+            transition: background 0.4s ease, border 0.4s ease, color 0.4s ease, box-shadow 0.4s ease;
+            border: 1px solid rgba(26, 26, 26, 0.05);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+        }
+        .service-card:hover {
+            background: #1A1A1A;
+            color: #F5F2ED;
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.3);
+            border-color: #D4AF37;
+        }
+        .service-card:hover p, .service-card:hover h3 { color: #F5F2ED; }
+        .service-card:hover .icon-wrapper { background: rgba(212, 175, 55, 0.2); color: #D4AF37; transform: translateZ(30px); }
+        .service-card h3, .service-card p { transition: transform 0.4s; }
+        .service-card:hover h3 { transform: translateZ(20px); }
+        .service-card:hover p { transform: translateZ(10px); }
+
+        /* Modern Carousel */
+        .carousel-container {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            scroll-behavior: smooth;
+        }
+        .carousel-container::-webkit-scrollbar { display: none; }
+        .carousel-item {
+            scroll-snap-align: center;
+            flex: 0 0 100%;
+            min-width: 100%;
+            padding: 1rem;
+        }
+        @media (min-width: 768px) { .carousel-item { flex: 0 0 50%; min-width: 50%; } }
+        @media (min-width: 1024px) { .carousel-item { flex: 0 0 33.333%; min-width: 33.333%; } }
+
+        /* Modal */
+        .img-modal {
+            display: none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(10, 10, 10, 0.95); backdrop-filter: blur(15px);
+            opacity: 0; transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .img-modal.active { display: flex; opacity: 1; justify-content: center; align-items: center; }
+        .img-modal img {
+            max-width: 90%; max-height: 90vh; border-radius: 12px;
+            box-shadow: 0 25px 50px -12px rgba(212, 175, 55, 0.2);
+            transform: scale(0.9); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .img-modal.active img { transform: scale(1); }
+        .close-modal {
+            position: absolute; top: 30px; right: 40px; color: #fff; font-size: 50px; font-weight: 300;
+            cursor: pointer; transition: 0.3s; z-index: 10001;
+        }
+        .close-modal:hover { color: #D4AF37; transform: rotate(90deg); }
+
+        /* Text Gradients & Utilities */
+        .text-gradient {
+            background: linear-gradient(135deg, #1A1A1A 0%, #4A4A4A 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-accent selection:text-white">
+
+    <div class="cursor-dot hidden lg:block"></div>
+    <div class="cursor-outline hidden lg:block"></div>
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-500" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative">
+            <a href="#" class="flex items-center gap-4 group hover-trigger">
+                <div class="relative w-12 h-12">
+                    <div class="absolute inset-0 bg-accent rounded-full animate-ping opacity-20 group-hover:opacity-40"></div>
+                    <img src="https://github.com/agelmet/Image-hosting-/blob/main/IMG_2676.jpeg?raw=true" alt="Logo" class="relative w-full h-full rounded-full shadow-lg group-hover:scale-110 transition-all duration-500 object-cover border border-white/50">
+                </div>
+                <span class="font-serif text-xl font-semibold tracking-widest uppercase relative overflow-hidden group-hover:text-accent transition-colors duration-300">
+                    ΘΟΔΩΡΗΣ ΔΕΜΕΡΟΥΤΗΣ
+                </span>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-10">
+                <a href="#about" class="text-xs font-semibold uppercase tracking-[0.2em] hover-trigger relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full hover:text-accent transition-colors">Η ΦΙΛΟΣΟΦΙΑ ΜΟΥ</a>
+                <a href="#services" class="text-xs font-semibold uppercase tracking-[0.2em] hover-trigger relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full hover:text-accent transition-colors">ΥΠΗΡΕΣΙΕΣ</a>
+                <a href="#space" class="text-xs font-semibold uppercase tracking-[0.2em] hover-trigger relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full hover:text-accent transition-colors">Ο ΧΩΡΟΣ</a>
+                <a href="#reviews" class="text-xs font-semibold uppercase tracking-[0.2em] hover-trigger relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-0 after:h-[1px] after:bg-accent after:transition-all after:duration-300 hover:after:w-full hover:text-accent transition-colors">ΑΞΙΟΛΟΓΗΣΕΙΣ</a>
+                <a href="#contact" class="hover-trigger relative inline-flex items-center justify-center px-8 py-3.5 bg-primary text-secondary text-xs font-semibold uppercase tracking-[0.2em] rounded-full overflow-hidden group">
+                    <span class="absolute inset-0 w-full h-full bg-accent transition-transform duration-300 ease-out transform translate-y-full group-hover:translate-y-0"></span>
+                    <span class="relative z-10 group-hover:text-primary transition-colors duration-300">ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ</span>
+                </a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none hover-trigger">
+                <div class="space-y-1.5 p-2">
+                    <span class="block w-6 h-0.5 bg-primary transition-all duration-300"></span>
+                    <span class="block w-6 h-0.5 bg-primary transition-all duration-300 w-4 ml-auto"></span>
+                    <span class="block w-6 h-0.5 bg-primary transition-all duration-300"></span>
+                </div>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-secondary/95 backdrop-blur-xl border-t border-gray-200/50 absolute w-full shadow-2xl">
+            <div class="flex flex-col px-8 py-6 space-y-6">
+                <a href="#about" class="mobile-link text-sm font-medium uppercase tracking-[0.2em] hover:text-accent transition-colors">Η ΦΙΛΟΣΟΦΙΑ ΜΟΥ</a>
+                <a href="#services" class="mobile-link text-sm font-medium uppercase tracking-[0.2em] hover:text-accent transition-colors">ΥΠΗΡΕΣΙΕΣ</a>
+                <a href="#space" class="mobile-link text-sm font-medium uppercase tracking-[0.2em] hover:text-accent transition-colors">Ο ΧΩΡΟΣ</a>
+                <a href="#reviews" class="mobile-link text-sm font-medium uppercase tracking-[0.2em] hover:text-accent transition-colors">ΑΞΙΟΛΟΓΗΣΕΙΣ</a>
+                <a href="#contact" class="mobile-link text-sm font-medium uppercase tracking-[0.2em] text-accent mt-4 inline-block">ΚΛΕΙΣΤΕ ΡΑΝΤΕΒΟΥ &rarr;</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center pt-24 pb-16 hero-gradient overflow-hidden">
+        <div class="hero-glow-1 animate-blob"></div>
+        <div class="hero-glow-2 animate-blob" style="animation-delay: 2s;"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 w-full grid lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
+            <div class="space-y-8 animate-fade-in-up">
+                <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-primary/10 bg-white/70 backdrop-blur-md shadow-sm hover-trigger">
+                    <span class="relative flex h-2.5 w-2.5">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent"></span>
+                    </span>
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary/80">ΨΥΧΟΛΟΓΟΣ & ΣΥΣΤΗΜΙΚΟΣ ΨΥΧΟΘΕΡΑΠΕΥΤΗΣ</span>
+                </div>
+                
+                <h1 class="font-serif text-6xl md:text-8xl leading-[1.1]">
+                    <span class="text-gradient">Ανθρώπινη Σύνδεση,</span><br>
+                    <span class="italic text-accent relative inline-block">
+                        Αποδοχή
+                        <svg class="absolute -bottom-1 left-0 w-full h-3 text-accent/30" viewBox="0 0 100 20" preserveAspectRatio="none"><path d="M0,10 Q50,20 100,10" stroke="currentColor" stroke-width="4" fill="none"/></svg>
+                    </span> 
+                    <span class="text-gradient">και Εξέλιξη.</span>
+                </h1>
+
+                <div class="block lg:hidden relative pt-6 pb-2">
+                    <div class="absolute inset-0 rounded-[2.5rem] border border-accent/30 transform rotate-3 scale-[1.03] transition-transform duration-1000"></div>
+                    <div class="relative image-hover-zoom rounded-[2rem] shadow-2xl">
+                        <img src="https://github.com/agelmet/Image-hosting-/blob/main/Facetune_18-04-2024-17-03-28.jpeg?raw=true" alt="Θοδωρής Δεμερούτης - Ψυχολόγος" class="w-full h-auto object-cover aspect-[4/5] rounded-[2rem]">
+                    </div>
+                    <div class="absolute -bottom-5 -left-4 bg-white/95 p-4 rounded-3xl shadow-xl backdrop-blur-xl border border-white flex items-center gap-3 z-20">
+                        <div class="w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-accent">
+                            <i data-lucide="shield-check" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <p class="text-[9px] font-bold uppercase tracking-[0.2em] text-muted mb-0.5">ΠΙΣΤΟΠΟΙΗΜΕΝΟΣ</p>
+                            <p class="font-serif font-bold text-lg text-primary leading-none">Stigma-Free</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-xl text-muted max-w-lg font-light leading-relaxed">
+                    Η θεραπευτική σχέση δεν είναι μια ψυχρή, κλινική διαδικασία, αλλά μια ζωντανή, ανθρώπινη σύνδεση. Ένας ασφαλής χώρος για ενήλικες, ζευγάρια, οικογένειες και παιδιά.
+                </p>
+                <div class="flex flex-wrap gap-4 md:gap-6 pt-2">
+                    <a href="#contact" class="hover-trigger px-8 md:px-10 py-4 md:py-5 bg-primary text-secondary text-xs font-bold uppercase tracking-[0.2em] rounded-full hover:shadow-[0_20px_40px_-10px_rgba(26,26,26,0.5)] flex items-center gap-3 group transition-all duration-500 transform hover:-translate-y-1">
+                        ΕΠΙΚΟΙΝΩΝΙΑ
+                        <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:bg-accent group-hover:text-primary transition-colors">
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </div>
+                    </a>
+                    <a href="#services" class="hover-trigger px-8 md:px-10 py-4 md:py-5 border border-primary/20 bg-white/50 backdrop-blur-sm text-primary text-xs font-bold uppercase tracking-[0.2em] rounded-full hover:bg-primary hover:text-secondary transition-all duration-500 transform hover:-translate-y-1">
+                        ΜΑΘΕΤΕ ΠΕΡΙΣΣΟΤΕΡΑ
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hidden lg:block relative animate-fade-in-up" style="animation-delay: 0.3s;">
+                <div class="absolute inset-0 rounded-[2.5rem] border border-accent/30 transform rotate-3 scale-[1.03] transition-transform duration-1000 hover:rotate-6"></div>
+                
+                <div class="relative image-hover-zoom rounded-[2rem] shadow-2xl animate-float hover-trigger">
+                    <img src="https://github.com/agelmet/Image-hosting-/blob/main/Facetune_18-04-2024-17-03-28.jpeg?raw=true" alt="Θοδωρής Δεμερούτης - Ψυχολόγος" class="w-full h-auto object-cover aspect-[4/5] rounded-[2rem]">
+                </div>
+                
+                <div class="absolute -bottom-8 -left-8 bg-white/90 p-6 rounded-3xl shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] backdrop-blur-xl border border-white flex items-center gap-5 reveal hover-trigger z-20">
+                    <div class="w-14 h-14 rounded-full bg-secondary flex items-center justify-center text-accent shadow-inner">
+                        <i data-lucide="shield-check" class="w-7 h-7"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-muted mb-1">ΠΙΣΤΟΠΟΙΗΜΕΝΟΣ</p>
+                        <p class="font-serif font-bold text-xl text-primary">Stigma-Free Zone</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-32 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+                <div class="hidden lg:block lg:col-span-5 reveal relative">
+                    <div class="absolute -left-10 top-20 w-32 h-32 bg-secondary rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob"></div>
+                    <div class="image-hover-zoom rounded-t-[10rem] rounded-b-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.08)] border-8 border-white hover-trigger relative z-10">
+                        <img src="https://github.com/agelmet/Image-hosting-/blob/main/Facetune_18-04-2024-17-13-12.jpeg?raw=true" alt="Θοδωρής Δεμερούτης" class="w-full h-auto object-cover aspect-[3/4]">
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-7 space-y-8 lg:space-y-10 reveal">
+                    <div class="space-y-4">
+                        <h2 class="font-serif text-5xl md:text-6xl text-primary leading-tight">Λίγα λόγια για εμένα</h2>
+                        <div class="w-24 h-1.5 bg-accent rounded-full"></div>
+                    </div>
+
+                    <div class="block lg:hidden relative pt-4 pb-2">
+                        <div class="absolute -right-5 top-10 w-24 h-24 bg-secondary rounded-full mix-blend-multiply filter blur-2xl opacity-70 animate-blob"></div>
+                        <div class="image-hover-zoom rounded-t-[8rem] rounded-b-[1.5rem] shadow-xl border-4 border-white relative z-10">
+                            <img src="https://github.com/agelmet/Image-hosting-/blob/main/Facetune_18-04-2024-17-13-12.jpeg?raw=true" alt="Θοδωρής Δεμερούτης" class="w-full h-auto object-cover aspect-[3/4]">
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6 lg:space-y-8 text-[1.1rem] text-gray-600 font-light leading-[1.8]">
+                        <p class="first-letter:text-6xl first-letter:font-serif first-letter:text-accent first-letter:float-left first-letter:mr-3 first-letter:-mt-2">
+                            Ονομάζομαι Θοδωρής Δεμερούτης, είμαι Ψυχολόγος (με άδεια ασκήσεως επαγγέλματος) και Ειδικευόμενος Συστημικός Ψυχοθεραπευτής. Στο ιδιωτικό μου γραφείο, καθώς και στον συνεργατικό χώρο του PSYence, υποδέχομαι ενήλικες, ζευγάρια, οικογένειες, παιδιά και εφήβους.
+                        </p>
+                        <p class="pl-6 border-l-2 border-accent/30 italic text-gray-800">
+                            Πυρήνας της φιλοσοφίας μου είναι η πεποίθηση πως η θεραπευτική σχέση δεν είναι μια ψυχρή, κλινική διαδικασία, αλλά μια ζωντανή, ανθρώπινη σύνδεση. Μέσα από αυτή τη σύνδεση δημιουργούνται οι συνθήκες για αληθινή αλλαγή, ενδυνάμωση και ψυχική ισορροπία.
+                        </p>
+                        <p>
+                            Το κλινικό και κοινωνικό μου έργο αποδεικνύει την απόλυτη δέσμευσή μου στην άρση του στίγματος και τη συμπερίληψη. Έχω προσφέρει σημαντικό ψυχοκοινωνικό έργο στο Red Umbrella Athens (RUA), ενδυναμώνοντας cis και trans γυναίκες που εργάζονται στο σεξ, καθώς και εθελοντικό έργο στον Σύλλογο Οροθετικών Ελλάδος «Θετική Φωνή».
+                        </p>
+                        <p>
+                            Παράλληλα, διαθέτω ισχυρή εξειδίκευση στο παιδί και την οικογένεια. Με πιστοποιημένη εκπαίδευση στην Παιδοψυχολογία και την Ανάλυση Παιδικού Ιχνογραφήματος, και με ενεργή εργασιακή εμπειρία σε Κέντρα Ειδικών Θεραπειών, προσεγγίζω τις δυσκολίες των παιδιών με ευαισθησία, προσφέροντας ταυτόχρονα ουσιαστική καθοδήγηση στους γονείς.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-32 bg-secondary relative overflow-hidden">
+        <div class="absolute right-0 top-0 w-1/3 h-full bg-white opacity-40 skew-x-12 transform origin-top-right"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-24 reveal">
+                <span class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.3em] text-accent mb-6 bg-white px-4 py-2 rounded-full shadow-sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-accent"></span> ΕΞΕΙΔΙΚΕΥΣΗ
+                </span>
+                <h2 class="font-serif text-5xl md:text-6xl text-primary mb-8">Υπηρεσίες</h2>
+                <p class="text-muted text-xl font-light">Προσεγγίζοντας τον άνθρωπο μέσα από το σύστημα των σχέσεών του, με σεβασμό και ενσυναίσθηση.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-10">
+                <div class="service-card p-12 rounded-[2rem] reveal hover-trigger group">
+                    <div class="icon-wrapper w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-primary mb-10 transition-all duration-500">
+                        <i data-lucide="user" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-serif text-3xl font-semibold mb-4 text-primary">Ατομική Θεραπεία Ενηλίκων</h3>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-accent mb-6 inline-block bg-accent/10 px-3 py-1.5 rounded-md">STIGMA-FREE ZONE</p>
+                    <p class="text-gray-600 font-light text-lg leading-relaxed">
+                        Η ατομική θεραπεία αποτελεί ένα ταξίδι προς τη βαθύτερη σύνδεση με τον εαυτό μας. Μέσα από τη Συστημική οπτική, εξερευνούμε πώς οι εμπειρίες, οι ρόλοι και τα περιβάλλοντα στα οποία ζούμε έχουν διαμορφώσει την ταυτότητά μας. Ένας χώρος ασφαλής για κάθε άνθρωπο (συμπεριλαμβανομένων ΛΟΑΤΚΙ+ ατόμων) που αναζητά ενδυνάμωση και προσωπική εξέλιξη.
+                    </p>
+                </div>
+
+                <div class="service-card p-12 rounded-[2rem] reveal hover-trigger group" style="transition-delay: 0.1s;">
+                    <div class="icon-wrapper w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-primary mb-10 transition-all duration-500">
+                        <i data-lucide="baby" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-serif text-3xl font-semibold mb-4 text-primary">Θεραπεία Παιδιών & Εφήβων</h3>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-accent mb-6 inline-block bg-accent/10 px-3 py-1.5 rounded-md">ΣΥΜΒΟΥΛΕΥΤΙΚΗ ΓΟΝΕΩΝ</p>
+                    <p class="text-gray-600 font-light text-lg leading-relaxed">
+                        Αξιοποιώντας εργαλεία όπως η Ανάλυση Παιδικού Ιχνογραφήματος (ζωγραφιά) και το παιχνίδι, αποκωδικοποιούμε τον εσωτερικό κόσμο του παιδιού. Παράλληλα, μέσω της Συμβουλευτικής Γονέων, συνεργαζόμαστε στενά με τους γονείς, προσφέροντάς τους τα κατάλληλα εφόδια για να κατανοήσουν τις ανάγκες του παιδιού τους.
+                    </p>
+                </div>
+
+                <div class="service-card p-12 rounded-[2rem] reveal hover-trigger group" style="transition-delay: 0.2s;">
+                    <div class="icon-wrapper w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-primary mb-10 transition-all duration-500">
+                        <i data-lucide="users" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-serif text-3xl font-semibold mb-4 text-primary">Συστημική Θεραπεία Σχέσεων & Οικογένειας</h3>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-accent mb-6 inline-block bg-accent/10 px-3 py-1.5 rounded-md">ΘΕΡΑΠΕΙΑ ΖΕΥΓΟΥΣ & ΟΙΚΟΓΕΝΕΙΑΣ</p>
+                    <p class="text-gray-600 font-light text-lg leading-relaxed">
+                        Στη Συστημική θεραπεία, το σύμπτωμα αποτελεί έκφραση μιας δυσλειτουργίας σε ολόκληρο το «σύστημα» των σχέσεων. Βοηθάμε τους συντρόφους να σπάσουν τον φαύλο κύκλο της σύγκρουσης και τα μέλη της οικογένειας να δημιουργήσουν μια γέφυρα κατανόησης που γεφυρώνει το χάσμα των γενεών.
+                    </p>
+                </div>
+
+                <div class="service-card p-12 rounded-[2rem] reveal hover-trigger group" style="transition-delay: 0.3s;">
+                    <div class="icon-wrapper w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-primary mb-10 transition-all duration-500">
+                        <i data-lucide="globe" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="font-serif text-3xl font-semibold mb-4 text-primary">Ευελιξία & Πολυγλωσσική Υποστήριξη</h3>
+                    <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-accent mb-6 inline-block bg-accent/10 px-3 py-1.5 rounded-md">ΔΙΑ ΖΩΣΗΣ, ONLINE & SESSIONS IN ENGLISH</p>
+                    <p class="text-gray-600 font-light text-lg leading-relaxed">
+                        Η θεραπεία προσαρμόζεται στον σύγχρονο τρόπο ζωής. Σας υποδεχόμαστε δια ζώσης στο φιλόξενο περιβάλλον του PSYence, ενώ παρέχεται η δυνατότητα διαδικτυακών συνεδριών (online). Επιπλέον, προσφέρονται συνεδρίες στην Αγγλική γλώσσα, εξυπηρετώντας expats και δίγλωσσα ζευγάρια.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-primary text-secondary relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMiIgY3k9IjIiIHI9IjIiIGZpbGw9IiNENEFGMzciLz48L3N2Zz4=')] bg-[length:30px_30px]"></div>
+        
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            <div class="space-y-16 reveal">
+                <div class="text-center max-w-2xl mx-auto mb-20">
+                    <h2 class="font-serif text-5xl md:text-6xl mb-6 text-white">Η Προσέγγισή Μου</h2>
+                    <p class="text-gray-400 font-light text-xl">Βασικές αρχές που διέπουν την κλινική μου πρακτική και διασφαλίζουν την ποιότητα της θεραπευτικής διαδικασίας.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="flex gap-6 group hover-trigger">
+                        <div class="w-16 h-16 rounded-full border border-accent/50 flex items-center justify-center flex-shrink-0 text-accent group-hover:bg-accent group-hover:text-primary transition-all duration-500 group-hover:scale-110 shadow-[0_0_20px_rgba(212,175,55,0.1)] group-hover:shadow-[0_0_30px_rgba(212,175,55,0.4)]">
+                            <i data-lucide="handshake" class="w-7 h-7"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-serif font-semibold mb-3 text-white group-hover:text-accent transition-colors">100% Συμπεριληπτική & Ασφαλής Πρακτική</h4>
+                            <p class="text-gray-400 font-light text-lg leading-relaxed">Η εμπειρία μου στο Red Umbrella Athens (RUA) και τη «Θετική Φωνή» αποτελεί εγγύηση ότι στο γραφείο μου δεν χωράει καμία επίκριση. Η αποδοχή είναι δεδομένη και αδιαπραγμάτευτη.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-6 group hover-trigger">
+                        <div class="w-16 h-16 rounded-full border border-accent/50 flex items-center justify-center flex-shrink-0 text-accent group-hover:bg-accent group-hover:text-primary transition-all duration-500 group-hover:scale-110 shadow-[0_0_20px_rgba(212,175,55,0.1)] group-hover:shadow-[0_0_30px_rgba(212,175,55,0.4)]">
+                            <i data-lucide="puzzle" class="w-7 h-7"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-serif font-semibold mb-3 text-white group-hover:text-accent transition-colors">Η Δύναμη του Συστήματος</h4>
+                            <p class="text-gray-400 font-light text-lg leading-relaxed">Ως Ειδικευόμενος Συστημικός Ψυχοθεραπευτής, προσεγγίζω τον άνθρωπο μέσα από το πλαίσιο στο οποίο ανήκει, δίνοντας έμφαση στις σχέσεις, την οικογένεια και την κοινωνία.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-6 group hover-trigger">
+                        <div class="w-16 h-16 rounded-full border border-accent/50 flex items-center justify-center flex-shrink-0 text-accent group-hover:bg-accent group-hover:text-primary transition-all duration-500 group-hover:scale-110 shadow-[0_0_20px_rgba(212,175,55,0.1)] group-hover:shadow-[0_0_30px_rgba(212,175,55,0.4)]">
+                            <i data-lucide="palette" class="w-7 h-7"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-serif font-semibold mb-3 text-white group-hover:text-accent transition-colors">Εξειδικευμένα Εργαλεία για Παιδιά</h4>
+                            <p class="text-gray-400 font-light text-lg leading-relaxed">Η εκπαίδευσή μου στην ανάλυση παιδικού ιχνογραφήματος μου επιτρέπει να προσεγγίζω τα παιδιά με τρόπους οικείους. Το σχέδιο και το παιχνίδι δείχνουν τον δρόμο.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-6 group hover-trigger">
+                        <div class="w-16 h-16 rounded-full border border-accent/50 flex items-center justify-center flex-shrink-0 text-accent group-hover:bg-accent group-hover:text-primary transition-all duration-500 group-hover:scale-110 shadow-[0_0_20px_rgba(212,175,55,0.1)] group-hover:shadow-[0_0_30px_rgba(212,175,55,0.4)]">
+                            <i data-lucide="link" class="w-7 h-7"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-2xl font-serif font-semibold mb-3 text-white group-hover:text-accent transition-colors">Συνεργατικό Πνεύμα (PSYence)</h4>
+                            <p class="text-gray-400 font-light text-lg leading-relaxed">Η ένταξή μου στον χώρο του PSYence αντικατοπτρίζει την πίστη μου στη δύναμη της συνεργασίας, διασφαλίζοντας ότι η κλινική μου σκέψη παραμένει οξυδερκής.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="space" class="py-32 bg-secondary">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+                <h2 class="font-serif text-5xl md:text-6xl text-primary mb-6">Ο Χώρος</h2>
+                <p class="text-muted text-xl font-light">Ένα φιλόξενο, ζεστό και ασφαλές περιβάλλον, σχεδιασμένο για να νιώθετε άνετα από την πρώτη στιγμή.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="reveal hover-trigger cursor-none group relative overflow-hidden rounded-[2rem] shadow-xl hover:shadow-2xl transition-shadow duration-500" onclick="openModal('https://github.com/agelmet/Image-hosting-/blob/main/IMG_8507.jpeg?raw=true')">
+                    <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex items-center justify-center">
+                        <i data-lucide="zoom-in" class="text-white w-10 h-10 transform scale-50 group-hover:scale-100 transition-transform duration-500"></i>
+                    </div>
+                    <img src="https://github.com/agelmet/Image-hosting-/blob/main/IMG_8507.jpeg?raw=true" alt="Ο χώρος του γραφείου" class="w-full h-96 object-cover transform scale-100 group-hover:scale-110 transition-transform duration-1000">
+                </div>
+                
+                <div class="reveal hover-trigger cursor-none group relative overflow-hidden rounded-[2rem] shadow-xl hover:shadow-2xl transition-shadow duration-500" style="transition-delay: 0.1s;" onclick="openModal('https://github.com/agelmet/Image-hosting-/blob/main/IMG_8508.jpeg?raw=true')">
+                    <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex items-center justify-center">
+                        <i data-lucide="zoom-in" class="text-white w-10 h-10 transform scale-50 group-hover:scale-100 transition-transform duration-500"></i>
+                    </div>
+                    <img src="https://github.com/agelmet/Image-hosting-/blob/main/IMG_8508.jpeg?raw=true" alt="Λεπτομέρεια χώρου" class="w-full h-96 object-cover transform scale-100 group-hover:scale-110 transition-transform duration-1000">
+                </div>
+                
+                <div class="reveal hover-trigger cursor-none group relative overflow-hidden rounded-[2rem] shadow-xl hover:shadow-2xl transition-shadow duration-500" style="transition-delay: 0.2s;" onclick="openModal('https://github.com/agelmet/Image-hosting-/blob/main/IMG_8510.jpeg?raw=true')">
+                    <div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex items-center justify-center">
+                        <i data-lucide="zoom-in" class="text-white w-10 h-10 transform scale-50 group-hover:scale-100 transition-transform duration-500"></i>
+                    </div>
+                    <img src="https://github.com/agelmet/Image-hosting-/blob/main/IMG_8510.jpeg?raw=true" alt="Θεραπευτικός χώρος" class="w-full h-96 object-cover transform scale-100 group-hover:scale-110 transition-transform duration-1000">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 bg-primary text-secondary relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="bg-[#222]/50 backdrop-blur-xl p-10 md:p-20 rounded-[3rem] border border-white/5 shadow-2xl reveal">
+                <h3 class="font-serif text-4xl md:text-5xl mb-16 text-center text-white">Η Πορεία της Θεραπείας</h3>
+                
+                <div class="relative border-l-2 border-accent/20 ml-6 md:ml-12 space-y-16">
+                    <div class="relative pl-12 group hover-trigger">
+                        <div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-accent shadow-[0_0_20px_rgba(212,175,55,0.6)] group-hover:scale-125 transition-transform duration-300"></div>
+                        <h5 class="text-2xl font-serif text-white mb-3 group-hover:text-accent transition-colors">1. Επικοινωνία & Ραντεβού</h5>
+                        <p class="text-gray-400 text-lg font-light">Κλείνουμε την πρώτη μας συνάντηση δια ζώσης ή online.</p>
+                    </div>
+                    
+                    <div class="relative pl-12 group hover-trigger">
+                        <div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-[#333] border-2 border-accent group-hover:bg-accent transition-colors duration-300 shadow-[0_0_0_rgba(212,175,55,0)] group-hover:shadow-[0_0_20px_rgba(212,175,55,0.6)]"></div>
+                        <h5 class="text-2xl font-serif text-white mb-3 group-hover:text-accent transition-colors">2. Πρώτη Συνεδρία (Λήψη Ιστορικού)</h5>
+                        <p class="text-gray-400 text-lg font-light">Γνωριμία, κατανόηση του αιτήματος και δημιουργία ασφαλούς πλαισίου.</p>
+                    </div>
+                    
+                    <div class="relative pl-12 group hover-trigger">
+                        <div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-[#333] border-2 border-accent group-hover:bg-accent transition-colors duration-300 shadow-[0_0_0_rgba(212,175,55,0)] group-hover:shadow-[0_0_20px_rgba(212,175,55,0.6)]"></div>
+                        <h5 class="text-2xl font-serif text-white mb-3 group-hover:text-accent transition-colors">3. Στοχοθεσία & Συμβόλαιο</h5>
+                        <p class="text-gray-400 text-lg font-light">Συναποφασίζουμε τους στόχους και τη συχνότητα των συναντήσεων.</p>
+                    </div>
+                    
+                    <div class="relative pl-12 group hover-trigger">
+                        <div class="absolute -left-[11px] top-1 w-5 h-5 rounded-full bg-[#333] border-2 border-accent group-hover:bg-accent transition-colors duration-300 shadow-[0_0_0_rgba(212,175,55,0)] group-hover:shadow-[0_0_20px_rgba(212,175,55,0.6)]"></div>
+                        <h5 class="text-2xl font-serif text-white mb-3 group-hover:text-accent transition-colors">4. Θεραπευτική Διαδικασία</h5>
+                        <p class="text-gray-400 text-lg font-light">Σταθερή δουλειά, αναστοχασμός και σταδιακή επίτευξη των στόχων.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="imageModal" class="img-modal hover-trigger cursor-none" onclick="closeModal(event)">
+        <span class="close-modal hover-trigger">&times;</span>
+        <img id="modalImage" src="" alt="Full size image" class="pointer-events-none">
+    </div>
+
+    <section id="reviews" class="py-32 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 mb-20 text-center reveal">
+            <h2 class="font-serif text-5xl md:text-6xl text-primary mb-6">Τι λένε οι θεραπευόμενοι</h2>
+            <div class="flex items-center justify-center gap-3 mb-6">
+                <span class="text-4xl font-bold text-primary">10.0</span>
+                <div class="flex text-accent drop-shadow-[0_2px_5px_rgba(212,175,55,0.4)]">
+                    <i data-lucide="star" class="fill-current w-8 h-8"></i>
+                    <i data-lucide="star" class="fill-current w-8 h-8"></i>
+                    <i data-lucide="star" class="fill-current w-8 h-8"></i>
+                    <i data-lucide="star" class="fill-current w-8 h-8"></i>
+                    <i data-lucide="star" class="fill-current w-8 h-8"></i>
+                </div>
+            </div>
+            <a href="https://www.doctoranytime.gr/d/Psychologos/deremoutis-theodoros" target="_blank" class="inline-flex items-center gap-2 text-sm font-medium text-gray-500 hover:text-accent transition-colors hover-trigger">
+                Διαβάστε περισσότερα στο 
+                <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="DoctorAnytime" class="h-5">
+            </a>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative reveal">
+            <button id="prevBtn" class="absolute -left-6 top-1/2 -translate-y-1/2 z-10 w-14 h-14 bg-white rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.1)] flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300 hidden md:flex hover-trigger">
+                <i data-lucide="chevron-left" class="w-6 h-6"></i>
+            </button>
+            <button id="nextBtn" class="absolute -right-6 top-1/2 -translate-y-1/2 z-10 w-14 h-14 bg-white rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.1)] flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-all duration-300 hidden md:flex hover-trigger">
+                <i data-lucide="chevron-right" class="w-6 h-6"></i>
+            </button>
+
+            <div class="carousel-container gap-8 pb-10" id="reviewsCarousel">
+                
+                <div class="carousel-item">
+                    <div class="bg-secondary p-10 rounded-[2rem] h-full flex flex-col border border-transparent hover:border-accent/20 hover:shadow-2xl transition-all duration-500 hover-trigger">
+                        <div class="flex justify-between items-start mb-8 w-full">
+                            <div>
+                                <h4 class="font-bold text-xl mb-1">Geo</h4>
+                                <p class="text-xs text-gray-500 uppercase tracking-widest">1 αξιολόγηση • 14 Σεπτεμβρίου 2025</p>
+                            </div>
+                            <div class="bg-primary text-accent text-sm font-bold px-3 py-1.5 rounded-lg shadow-inner">10.0</div>
+                        </div>
+                        
+                        <div class="review-wrapper flex flex-col items-start w-full flex-grow">
+                            <div class="review-text-container overflow-hidden transition-[max-height] duration-700 ease-in-out relative max-h-[140px] w-full">
+                                <p class="text-gray-700 font-serif text-xl italic leading-relaxed">
+                                    "Πέρασα ενα χρόνο δουλεύοντας με τον Θοδωρή και είμαι πολύ ευγνώμων για τις συνεδρίες και όλες τις γνώσεις. Πάντα έφευγα από τις συνεδρίες μας με μια βαθύτερη κατανόηση του εαυτού μου και των καταστάσεων που ήθελα να εξερευνήσω. Εκτίμησα πραγματικά την ήρεμη, ευγενική και ειλικρινή σταση του με την οποία ήταν πάντα συνεπής και αυτό με βοήθησε να τελειώνω κάθε συνεδρία νιώθοντας πιο προσγειωμένος. Μου άρεσε που με βοηθούσε να καταλάβω τα πράγματα εξηγώντας την ψυχολογία και τη θεωρία, δεν το είχα βιώσει ποτέ με κανέναν προηγούμενο θεραπευτή και με βοήθησε πραγματικά. Νιώθω ότι αναπτύξαμε μια δυνατή σχέση στην οποία θα ήμουν πολύ χαρούμενος να επιστρέψω στο μέλλον. Σε ευχαριστώ Θοδωρή"
+                                </p>
+                                <div class="read-more-fade absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-secondary to-transparent pointer-events-none transition-opacity duration-500"></div>
+                            </div>
+                            <button class="read-more-btn text-accent text-xs font-bold uppercase tracking-[0.2em] mt-4 hover:text-primary transition-colors hidden z-10">
+                                ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ
+                            </button>
+                        </div>
+                        
+                        <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="DoctorAnytime" class="h-4 mt-auto pt-10 opacity-40 grayscale self-start">
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="bg-secondary p-10 rounded-[2rem] h-full flex flex-col border border-transparent hover:border-accent/20 hover:shadow-2xl transition-all duration-500 hover-trigger">
+                        <div class="flex justify-between items-start mb-8 w-full">
+                            <div>
+                                <h4 class="font-bold text-xl mb-1">Ioannis</h4>
+                                <p class="text-xs text-gray-500 uppercase tracking-widest">1 αξιολόγηση • 14 Αυγούστου 2025</p>
+                            </div>
+                            <div class="bg-primary text-accent text-sm font-bold px-3 py-1.5 rounded-lg shadow-inner">10.0</div>
+                        </div>
+                        
+                        <div class="review-wrapper flex flex-col items-start w-full flex-grow">
+                            <div class="review-text-container overflow-hidden transition-[max-height] duration-700 ease-in-out relative max-h-[140px] w-full">
+                                <p class="text-gray-700 font-serif text-xl italic leading-relaxed">
+                                    "Η εμπειρία μου με τον κύριο Δεμερούτη είναι εξαιρετική. Από την πρώτη συνεδρία ένιωσα ασφάλεια και κατανόηση, καθώς μου παρείχε ένα περιβάλλον εμπιστοσύνης και αποδοχής. Ακούει με προσοχή, θέτει τις σωστές ερωτήσεις και δίνει πρακτικά εργαλεία που πραγματικά με βοηθούν στην καθημερινότητά μου. Η ενσυναίσθηση, η επαγγελματικότητα και η αφοσίωση του είναι εμφανείς σε κάθε συνεδρία. Τον συστήνω ανεπιφύλακτα σε όποιον αναζητά ουσιαστική ψυχολογική υποστήριξη και προσωπική εξέλιξη."
+                                </p>
+                                <div class="read-more-fade absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-secondary to-transparent pointer-events-none transition-opacity duration-500"></div>
+                            </div>
+                            <button class="read-more-btn text-accent text-xs font-bold uppercase tracking-[0.2em] mt-4 hover:text-primary transition-colors hidden z-10">
+                                ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ
+                            </button>
+                        </div>
+                        
+                        <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="DoctorAnytime" class="h-4 mt-auto pt-10 opacity-40 grayscale self-start">
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="bg-secondary p-10 rounded-[2rem] h-full flex flex-col border border-transparent hover:border-accent/20 hover:shadow-2xl transition-all duration-500 hover-trigger">
+                        <div class="flex justify-between items-start mb-8 w-full">
+                            <div>
+                                <h4 class="font-bold text-xl mb-1">Elias</h4>
+                                <p class="text-xs text-gray-500 uppercase tracking-widest">1 αξιολόγηση • 12 Αυγούστου 2025</p>
+                            </div>
+                            <div class="bg-primary text-accent text-sm font-bold px-3 py-1.5 rounded-lg shadow-inner">10.0</div>
+                        </div>
+                        
+                        <div class="review-wrapper flex flex-col items-start w-full flex-grow">
+                            <div class="review-text-container overflow-hidden transition-[max-height] duration-700 ease-in-out relative max-h-[140px] w-full">
+                                <p class="text-gray-700 font-serif text-xl italic leading-relaxed">
+                                    "Είμαι πραγματικά ευγνώμων που βρήκα τον κ. Δεμερούτη μέσω του Doctors Anytime. Περνάω μια αρκετά δύσκολη περίοδο και, για να είμαι ειλικρινής, είχα πολλές αμφιβολίες και αγωνία για το πώς θα ήταν η διαδικασία της ψυχοθεραπείας. Ωστόσο, από την πρώτη κιόλας συνεδρία, ένιωσα αμέσως άνετα και ασφαλής. Αυτό που με εντυπωσίασε περισσότερο ήταν ο τρόπος που με άκουγε. Έχει μια μοναδική ικανότητα να ακούει με προσοχή και πραγματική ενσυναίσθηση, χωρίς καμία κρίση (το ξέρω ότι όλοι οι ψυχολόγοι έτσι θα έπρεπε να είναι αλλά έχω δει διάφορα και δεν το παίρνω δεδομένο!). Παρόλο που ακόμα βρίσκομαι σε μια απαιτητική φάση της ζωής μου, η καθοδήγησή του είναι καθοριστική. Ευχαριστώ πολύ!"
+                                </p>
+                                <div class="read-more-fade absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-secondary to-transparent pointer-events-none transition-opacity duration-500"></div>
+                            </div>
+                            <button class="read-more-btn text-accent text-xs font-bold uppercase tracking-[0.2em] mt-4 hover:text-primary transition-colors hidden z-10">
+                                ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ
+                            </button>
+                        </div>
+                        
+                        <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="DoctorAnytime" class="h-4 mt-auto pt-10 opacity-40 grayscale self-start">
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="bg-secondary p-10 rounded-[2rem] h-full flex flex-col border border-transparent hover:border-accent/20 hover:shadow-2xl transition-all duration-500 hover-trigger">
+                        <div class="flex justify-between items-start mb-8 w-full">
+                            <div>
+                                <h4 class="font-bold text-xl mb-1">ΧΡΥΣΑΝΘΗ</h4>
+                                <p class="text-xs text-gray-500 uppercase tracking-widest">5 αξιολογήσεις • 23 Ιανουαρίου 2026</p>
+                            </div>
+                            <div class="bg-primary text-accent text-sm font-bold px-3 py-1.5 rounded-lg shadow-inner">10.0</div>
+                        </div>
+                        
+                        <div class="review-wrapper flex flex-col items-start w-full flex-grow">
+                            <div class="review-text-container overflow-hidden transition-[max-height] duration-700 ease-in-out relative max-h-[140px] w-full">
+                                <p class="text-gray-700 font-serif text-xl italic leading-relaxed">
+                                    "Φιλικός, ήρεμος, εμπνέει εμπιστοσύνη. Ασχολήθηκε και έδειξε ενδιαφέρον."
+                                </p>
+                                <div class="read-more-fade absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-secondary to-transparent pointer-events-none transition-opacity duration-500"></div>
+                            </div>
+                            <button class="read-more-btn text-accent text-xs font-bold uppercase tracking-[0.2em] mt-4 hover:text-primary transition-colors hidden z-10">
+                                ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ
+                            </button>
+                        </div>
+                        
+                        <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="DoctorAnytime" class="h-4 mt-auto pt-10 opacity-40 grayscale self-start">
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="bg-secondary p-10 rounded-[2rem] h-full flex flex-col border border-transparent hover:border-accent/20 hover:shadow-2xl transition-all duration-500 hover-trigger">
+                        <div class="flex justify-between items-start mb-8 w-full">
+                            <div>
+                                <h4 class="font-bold text-xl mb-1">Roula</h4>
+                                <p class="text-xs text-gray-500 uppercase tracking-widest">1 αξιολόγηση • 29 Δεκεμβρίου 2025</p>
+                            </div>
+                            <div class="bg-primary text-accent text-sm font-bold px-3 py-1.5 rounded-lg shadow-inner">10.0</div>
+                        </div>
+                        
+                        <div class="review-wrapper flex flex-col items-start w-full flex-grow">
+                            <div class="review-text-container overflow-hidden transition-[max-height] duration-700 ease-in-out relative max-h-[140px] w-full">
+                                <p class="text-gray-700 font-serif text-xl italic leading-relaxed">
+                                    "Απευθύνθηκα στον κύριο Δεμερούτη μετά από μια δύσκολη συνθήκη υγείας του συζύγου μου αναζητώντας υποστήριξη. Ένιωσα ασφάλεια να ανοιχτώ και να μοιραστώ πράγματα και μετά από αρκετό καιρό συνεχίζω σταθερά εξερευνώντας πράγματα που δεν περίμενα στην αρχή."
+                                </p>
+                                <div class="read-more-fade absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-secondary to-transparent pointer-events-none transition-opacity duration-500"></div>
+                            </div>
+                            <button class="read-more-btn text-accent text-xs font-bold uppercase tracking-[0.2em] mt-4 hover:text-primary transition-colors hidden z-10">
+                                ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ
+                            </button>
+                        </div>
+                        
+                        <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="DoctorAnytime" class="h-4 mt-auto pt-10 opacity-40 grayscale self-start">
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="bg-secondary p-10 rounded-[2rem] h-full flex flex-col border border-transparent hover:border-accent/20 hover:shadow-2xl transition-all duration-500 hover-trigger">
+                        <div class="flex justify-between items-start mb-8 w-full">
+                            <div>
+                                <h4 class="font-bold text-xl mb-1">ZACLINE</h4>
+                                <p class="text-xs text-gray-500 uppercase tracking-widest">1 αξιολόγηση • 23 Δεκεμβρίου 2025</p>
+                            </div>
+                            <div class="bg-primary text-accent text-sm font-bold px-3 py-1.5 rounded-lg shadow-inner">10.0</div>
+                        </div>
+                        
+                        <div class="review-wrapper flex flex-col items-start w-full flex-grow">
+                            <div class="review-text-container overflow-hidden transition-[max-height] duration-700 ease-in-out relative max-h-[140px] w-full">
+                                <p class="text-gray-700 font-serif text-xl italic leading-relaxed">
+                                    "Ο κύριος Θοδωρής είναι εξαιρετικός θεραπευτής ! Από την αρχή ένιωσα κατανόηση και υποστήριξη στο πρόβλημα μου και τον ευχαριστώ πολύ.. ήρεμος, διερευνητικός με αγάπη για αυτό αφού κάνει ! Με έκανε να αγαπήσω ξανά τον εαυτό μου"
+                                </p>
+                                <div class="read-more-fade absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-secondary to-transparent pointer-events-none transition-opacity duration-500"></div>
+                            </div>
+                            <button class="read-more-btn text-accent text-xs font-bold uppercase tracking-[0.2em] mt-4 hover:text-primary transition-colors hidden z-10">
+                                ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ
+                            </button>
+                        </div>
+                        
+                        <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="DoctorAnytime" class="h-4 mt-auto pt-10 opacity-40 grayscale self-start">
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="bg-secondary p-10 rounded-[2rem] h-full flex flex-col border border-transparent hover:border-accent/20 hover:shadow-2xl transition-all duration-500 hover-trigger">
+                        <div class="flex justify-between items-start mb-8 w-full">
+                            <div>
+                                <h4 class="font-bold text-xl mb-1">ΒΙΚΤΩΡΙΑ</h4>
+                                <p class="text-xs text-gray-500 uppercase tracking-widest">1 αξιολόγηση • 20 Δεκεμβρίου 2025</p>
+                            </div>
+                            <div class="bg-primary text-accent text-sm font-bold px-3 py-1.5 rounded-lg shadow-inner">10.0</div>
+                        </div>
+                        
+                        <div class="review-wrapper flex flex-col items-start w-full flex-grow">
+                            <div class="review-text-container overflow-hidden transition-[max-height] duration-700 ease-in-out relative max-h-[140px] w-full">
+                                <p class="text-gray-700 font-serif text-xl italic leading-relaxed">
+                                    "Ένιωσα εμπιστοσύνη , άνεση και ενσυναίσθηση. Με αντιμετώπισε με σοβαρότητα , επαγγελισμό και ευαισθησία και με βοήθησε στα θέματα μου. Τον συστήνω ανεπιφύλακτα ."
+                                </p>
+                                <div class="read-more-fade absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-secondary to-transparent pointer-events-none transition-opacity duration-500"></div>
+                            </div>
+                            <button class="read-more-btn text-accent text-xs font-bold uppercase tracking-[0.2em] mt-4 hover:text-primary transition-colors hidden z-10">
+                                ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ
+                            </button>
+                        </div>
+                        
+                        <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="DoctorAnytime" class="h-4 mt-auto pt-10 opacity-40 grayscale self-start">
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="bg-secondary p-10 rounded-[2rem] h-full flex flex-col border border-transparent hover:border-accent/20 hover:shadow-2xl transition-all duration-500 hover-trigger">
+                        <div class="flex justify-between items-start mb-8 w-full">
+                            <div>
+                                <h4 class="font-bold text-xl mb-1">Sergios</h4>
+                                <p class="text-xs text-gray-500 uppercase tracking-widest">1 αξιολόγηση • 19 Δεκεμβρίου 2025</p>
+                            </div>
+                            <div class="bg-primary text-accent text-sm font-bold px-3 py-1.5 rounded-lg shadow-inner">10.0</div>
+                        </div>
+                        
+                        <div class="review-wrapper flex flex-col items-start w-full flex-grow">
+                            <div class="review-text-container overflow-hidden transition-[max-height] duration-700 ease-in-out relative max-h-[140px] w-full">
+                                <p class="text-gray-700 font-serif text-xl italic leading-relaxed">
+                                    "Ο Θοδωρής είναι ένας επαγγελματίας με πολύ θετική διάθεση, κατάρτιση και αγάπη για αυτό που κάνει. Κέρδισε αμέσως την εμπιστοσύνη μου και με έβαλε στο πλαίσιο της θεραπείας πολύ γρήγορα."
+                                </p>
+                                <div class="read-more-fade absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-secondary to-transparent pointer-events-none transition-opacity duration-500"></div>
+                            </div>
+                            <button class="read-more-btn text-accent text-xs font-bold uppercase tracking-[0.2em] mt-4 hover:text-primary transition-colors hidden z-10">
+                                ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ
+                            </button>
+                        </div>
+                        
+                        <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="DoctorAnytime" class="h-4 mt-auto pt-10 opacity-40 grayscale self-start">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex justify-center gap-3 mt-4 md:hidden" id="carouselDots">
+                <div class="w-2.5 h-2.5 rounded-full bg-accent transition-colors duration-300"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-gray-300 transition-colors duration-300"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-gray-300 transition-colors duration-300"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-gray-300 transition-colors duration-300"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-gray-300 transition-colors duration-300"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-gray-300 transition-colors duration-300"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-gray-300 transition-colors duration-300"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-gray-300 transition-colors duration-300"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-primary text-secondary pt-40 pb-12 rounded-t-[4rem] mt-[-4rem] relative z-20 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#0a0a0a]"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-20 mb-32">
+                <div class="reveal">
+                    <h2 class="font-serif text-6xl md:text-7xl mb-8 text-white">Ας ξεκινήσουμε.</h2>
+                    <p class="text-gray-400 text-xl font-light mb-16 max-w-md leading-relaxed">Είμαι εδώ για να ακούσω. Επικοινωνήστε μαζί μου για να προγραμματίσουμε την πρώτη μας συνάντηση.</p>
+                    
+                    <div class="space-y-10">
+                        <div class="flex items-start gap-6 group hover-trigger">
+                            <div class="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-primary transition-all duration-500 group-hover:scale-110">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 mb-2">ΔΙΕΥΘΥΝΣΗ</h5>
+                                <p class="text-xl text-white group-hover:text-accent transition-colors">Νικ. Γεννηματά 12, Πανόρμου, Αττική</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-6 group hover-trigger">
+                            <div class="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-primary transition-all duration-500 group-hover:scale-110">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 mb-2">ΤΗΛΕΦΩΝΟ</h5>
+                                <a href="tel:+306942997330" class="text-xl text-white hover:text-accent transition-colors block">694 299 7330</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-6 group hover-trigger">
+                            <div class="w-14 h-14 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-primary transition-all duration-500 group-hover:scale-110">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h5 class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 mb-2">ΩΡΑΡΙΟ</h5>
+                                <p class="text-xl text-white">Δευτέρα - Παρασκευή<br><span class="text-gray-400 text-sm mt-1 block">Κατόπιν ραντεβού</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal relative" style="transition-delay: 0.2s;">
+                    <div class="absolute inset-0 bg-gradient-to-r from-accent/50 to-primary rounded-[3rem] blur-xl opacity-50 animate-blob"></div>
+                    
+                    <div class="relative bg-[#111]/80 backdrop-blur-2xl border border-white/10 p-12 rounded-[3rem] h-full flex flex-col justify-center items-center text-center shadow-2xl">
+                        <div class="relative mb-10 hover-trigger">
+                            <div class="absolute inset-0 bg-accent rounded-full blur-xl opacity-30"></div>
+                            <img src="https://github.com/agelmet/Image-hosting-/blob/main/IMG_2676.jpeg?raw=true" alt="Logo" class="relative w-32 h-32 rounded-full shadow-2xl object-cover border-2 border-accent/50 hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <h3 class="font-serif text-4xl mb-4 text-white">Κλείστε Ραντεβού Online</h3>
+                        <p class="text-gray-400 mb-10 font-light text-lg">Μέσω της πλατφόρμας DoctorAnytime, εύκολα και γρήγορα.</p>
+                        
+                        <a href="https://www.doctoranytime.gr/d/Psychologos/deremoutis-theodoros" target="_blank" class="hover-trigger w-full py-5 bg-white text-primary text-sm font-bold uppercase tracking-[0.2em] rounded-full hover:bg-accent hover:text-white transition-all duration-500 flex items-center justify-center gap-4 hover:shadow-[0_10px_30px_rgba(212,175,55,0.4)] group transform hover:-translate-y-1">
+                            <span>ΚΡΑΤΗΣΗ ΜΕΣΩ</span>
+                            <img src="https://www.doctoranytime.gr/images/logo-rebranding.svg" alt="DoctorAnytime" class="h-6 filter brightness-0 group-hover:brightness-0 group-hover:invert transition-all">
+                        </a>
+                        
+                        <div class="mt-12 pt-12 border-t border-white/10 w-full flex justify-center">
+                            <a href="https://www.instagram.com/intothepsychverse/" target="_blank" class="hover-trigger w-16 h-16 rounded-full bg-white/5 border border-white/20 flex items-center justify-center text-white hover:bg-accent hover:border-accent hover:shadow-[0_0_20px_rgba(212,175,55,0.5)] transition-all duration-500 group transform hover:-translate-y-1">
+                                <i data-lucide="instagram" class="w-7 h-7 group-hover:scale-125 transition-transform duration-500"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500 font-light tracking-wide">
+                <p>&copy; 2026 Θοδωρής Δεμερούτης. Με επιφύλαξη παντός δικαιώματος.</p>
+                <p>Designed by <a href="https://advonmedia.com" target="_blank" class="text-white hover:text-accent transition-colors font-medium hover-trigger">Advon Media</a></p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.replace('py-4', 'py-2');
+                navbar.classList.replace('bg-secondary/95', 'bg-secondary/98');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.replace('py-2', 'py-4');
+                navbar.classList.replace('bg-secondary/98', 'bg-secondary/95');
+            }
+        });
+
+        // Advanced Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, revealOptions);
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // 3D Tilt Effect on Service Cards
+        const cards = document.querySelectorAll('.service-card');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', e => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const xc = rect.width / 2;
+                const yc = rect.height / 2;
+                const dx = x - xc;
+                const dy = y - yc;
+                card.style.transform = `perspective(1000px) rotateY(${dx / 20}deg) rotateX(${-dy / 20}deg) translateY(-10px) scale(1.02)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg) translateY(0) scale(1)`;
+            });
+        });
+
+        // Custom Cursor Logic
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+        const hoverTriggers = document.querySelectorAll('.hover-trigger, a, button');
+
+        if (window.matchMedia("(pointer: fine)").matches) {
+            window.addEventListener('mousemove', (e) => {
+                const posX = e.clientX;
+                const posY = e.clientY;
+                cursorDot.style.left = `${posX}px`;
+                cursorDot.style.top = `${posY}px`;
+                
+                // Slight delay for the outline ring
+                setTimeout(() => {
+                    cursorOutline.style.left = `${posX}px`;
+                    cursorOutline.style.top = `${posY}px`;
+                }, 80);
+            });
+
+            hoverTriggers.forEach(trigger => {
+                trigger.addEventListener('mouseenter', () => document.body.classList.add('hover-state'));
+                trigger.addEventListener('mouseleave', () => document.body.classList.remove('hover-state'));
+            });
+        }
+
+        // Image Modal Logic
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+
+        window.openModal = function(src) {
+            modal.classList.add('active');
+            modalImg.src = src;
+            document.body.style.overflow = 'hidden';
+            document.body.classList.remove('hover-state');
+        }
+
+        window.closeModal = function(e) {
+            if (e.target === modal || e.target.classList.contains('close-modal')) {
+                modal.classList.remove('active');
+                setTimeout(() => { modalImg.src = ''; }, 400);
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Read More Reviews Logic
+        window.addEventListener('load', () => {
+            const reviewWrappers = document.querySelectorAll('.review-wrapper');
+            reviewWrappers.forEach(wrapper => {
+                const container = wrapper.querySelector('.review-text-container');
+                const text = wrapper.querySelector('p');
+                const btn = wrapper.querySelector('.read-more-btn');
+                const fade = wrapper.querySelector('.read-more-fade');
+
+                // If text is taller than the max-height (140px approx 4 lines)
+                if (text.offsetHeight > 150) {
+                    btn.classList.remove('hidden');
+                    
+                    btn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        if (container.classList.contains('max-h-[140px]')) {
+                            // Expand
+                            container.classList.remove('max-h-[140px]');
+                            container.classList.add('max-h-[2000px]');
+                            fade.classList.add('opacity-0');
+                            btn.innerText = 'ΛΙΓΟΤΕΡΑ';
+                        } else {
+                            // Collapse
+                            container.classList.add('max-h-[140px]');
+                            container.classList.remove('max-h-[2000px]');
+                            fade.classList.remove('opacity-0');
+                            btn.innerText = 'ΔΙΑΒΑΣΤΕ ΠΕΡΙΣΣΟΤΕΡΑ';
+                        }
+                    });
+                } else {
+                    fade.classList.add('hidden');
+                }
+            });
+        });
+
+        // Carousel Logic
+        const carousel = document.getElementById('reviewsCarousel');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const dots = document.querySelectorAll('#carouselDots div');
+        
+        if (carousel && prevBtn && nextBtn) {
+            const updateCarousel = () => {
+                const itemWidth = carousel.clientWidth;
+                const scrollPosition = carousel.scrollLeft;
+                const activeIndex = Math.round(scrollPosition / itemWidth);
+                
+                dots.forEach((dot, index) => {
+                    if (index === activeIndex) {
+                        dot.classList.replace('bg-gray-300', 'bg-accent');
+                    } else {
+                        dot.classList.replace('bg-accent', 'bg-gray-300');
+                    }
+                });
+            };
+
+            nextBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: carousel.clientWidth, behavior: 'smooth' });
+            });
+
+            prevBtn.addEventListener('click', () => {
+                carousel.scrollBy({ left: -carousel.clientWidth, behavior: 'smooth' });
+            });
+
+            carousel.addEventListener('scroll', updateCarousel);
+            window.addEventListener('resize', updateCarousel);
+        }
+    </script>
+</body>
+</html>
