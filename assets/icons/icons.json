@@ -1,0 +1,16 @@
+{
+ "source": {
+  "kind": "file",
+  "ref": "assets/img/logo.png"
+ },
+ "source_md5": "e3c9d1ae21edd4a57fd2313077bed291",
+ "version": "b73a0fcc",
+ "tile": null,
+ "crop": null,
+ "header": [
+  "file",
+  "assets/img/logo-160.webp",
+  "3d0e7689e4d4ec325d452cbc18748c36"
+ ],
+ "made": "2026-10-14"
+}
